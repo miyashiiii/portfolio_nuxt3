@@ -25,22 +25,12 @@
 </template>
 
 <script>
+import posts from '~/assets/posts.json'
 export default {
   data() {
+    console.log(posts)
     return {
-      blogPosts: [
-        {
-          title: "PRODUCTION READY GRAPHQLを読む: 1章. GraphQL入門",
-          url: "https://miyashiiii.hatenablog.jp/entry/2023/07/22/213724",
-          date: "2023-07-22",
-        },
-        {
-          title:
-            "Strawberry Djangoを使ってDjangoのChoicesを自動でGraphQLのEnum化する",
-          url: "https://qiita.com/miyashiiii/items/f93c4c57a51dbf8ecfd7",
-          date: "2023-07-20",
-        },
-      ],
+      blogPosts: posts,
     };
   },
   methods: {
@@ -55,6 +45,10 @@ export default {
         return "/sns/hatenablog.png";
       } else if (domain.includes("qiita")) {
         return "/sns/qiita.png";
+      } else if (domain.includes("note")) {
+        return "/sns/note.png";
+      } else if (domain.includes("zenn")) {
+        return "/sns/zenn.png";
       } else {
         // ドメインが一致しない場合のデフォルトのアイコン
         return "/sns/hatenablog.png";
@@ -67,6 +61,10 @@ export default {
         return "はてなブログ";
       } else if (domain.includes("qiita")) {
         return "Qiita";
+      } else if (domain.includes("note")) {
+        return "note";
+      } else if (domain.includes("zenn")) {
+        return "Zenn";
       } else {
         // ドメインが一致しない場合のデフォルトのアイコン
         return "/sns/hatenablog.png";

@@ -7,7 +7,6 @@
             <NuxtLink to="/"> miyashiiii portfolio </NuxtLink>
           </v-app-bar-title>
           <v-spacer></v-spacer>
-
           <v-btn nuxt to="/posts">posts</v-btn>
           <v-btn nuxt to="/works">works</v-btn>
         </v-container>
