@@ -2,15 +2,21 @@
   <div>
     <v-app>
       <v-app-bar color="primary">
-          <v-app-bar-title class="pl-5 white--text"> miyashiiii portfolio </v-app-bar-title>
-        <template v-slot:append>
+        <v-container class="fill-height">
+          <v-app-bar-title class="pl-5">
+            <NuxtLink to="/"> miyashiiii portfolio </NuxtLink>
+          </v-app-bar-title>
+          <v-spacer></v-spacer>
+
           <v-btn nuxt to="/posts">posts</v-btn>
           <v-btn nuxt to="/works">works</v-btn>
-        </template>
+        </v-container>
       </v-app-bar>
-      <v-main>
-        <slot />
-      </v-main>
+      <v-container max-width="75%">
+        <v-main>
+          <slot />
+        </v-main>
+      </v-container>
     </v-app>
   </div>
 </template>

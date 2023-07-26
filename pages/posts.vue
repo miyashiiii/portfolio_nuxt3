@@ -1,30 +1,25 @@
 <template>
-  <p class="text-center font-weight-bold mt-5">Works</p>
+  <p class="text-h2 text-center mt-5">Posts</p>
+  <v-row class="justify-center mb-5">
+    <v-col cols="3">
+      <v-divider color="primary" thickness="5" class="my-5"></v-divider>
+    </v-col>
+  </v-row>
   <v-row>
-    <v-col cols="8" class="mx-auto">
-      <v-list-item-group>
-        <div v-for="(item, index) in blogPosts" :key="index">
-          <v-list-item :href="item.url">
-            <v-list-item-avatar>
-              <v-img
-                :src="getIconPath(item.url)"
-                height="25"
-                width="25"
-                contain
-              ></v-img>
-            </v-list-item-avatar>
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-              <v-list-item-sub-title class="grey--text">{{
-                item.date
-              }}</v-list-item-sub-title>
-            </v-list-item-content>
-          </v-list-item>
-          <!-- 末尾のアイテムにはdivider追加しない -->
-          <!-- <v-divider v-if="index < blogPosts.length - 1"></v-divider> -->
+    <v-col cols="8" xl="4" class="mx-auto">
+      <v-list lines="one">
+        <v-divider></v-divider>
+        <div v-for="(item, index) in blogPosts" :key="item.title">
+          <v-list-item
+            :title="item.title"
+            :subtitle="item.date + ' ' + getSiteName(item.url)"
+            :prepend-avatar="getIconPath(item.url)"
+            :href="item.url"
+            class="py-5"
+          ></v-list-item>
           <v-divider></v-divider>
         </div>
-      </v-list-item-group>
+      </v-list>
     </v-col>
   </v-row>
 </template>
@@ -38,14 +33,12 @@ export default {
           title: "PRODUCTION READY GRAPHQLを読む: 1章. GraphQL入門",
           url: "https://miyashiiii.hatenablog.jp/entry/2023/07/22/213724",
           date: "2023-07-22",
-          icon: "/sns/hatenablog.png",
         },
         {
           title:
             "Strawberry Djangoを使ってDjangoのChoicesを自動でGraphQLのEnum化する",
           url: "https://qiita.com/miyashiiii/items/f93c4c57a51dbf8ecfd7",
           date: "2023-07-20",
-          icon: "/sns/qiita.png",
         },
       ],
     };
@@ -62,6 +55,18 @@ export default {
         return "/sns/hatenablog.png";
       } else if (domain.includes("qiita")) {
         return "/sns/qiita.png";
+      } else {
+        // ドメインが一致しない場合のデフォルトのアイコン
+        return "/sns/hatenablog.png";
+      }
+    },
+    getSiteName(url) {
+      // ドメイン名に基づいてアイコンのパスを返す
+      const domain = this.getDomain(url);
+      if (domain.includes("hatenablog")) {
+        return "はてなブログ";
+      } else if (domain.includes("qiita")) {
+        return "Qiita";
       } else {
         // ドメインが一致しない場合のデフォルトのアイコン
         return "/sns/hatenablog.png";

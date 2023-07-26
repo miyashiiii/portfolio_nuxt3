@@ -2,12 +2,12 @@
   <!-- Profile section -->
   <v-row class="align-center justify-center">
     <v-col cols="4">
-      <v-img src="/miyashiiii.png" height="400" weight="400"></v-img>
+      <v-img src="/miyashiiii.png" height="350" weight="350"></v-img>
     </v-col>
     <v-col cols="4">
-      <p class="font-weight-bold">miyashiiii</p>
-      <p>Software Engineer</p>
-      <p>Saitama, Japan</p>
+      <p class="font-weight-bold mb-3 prof-text">miyashiiii</p>
+      <p class="mb-3 prof-text">Software Engineer</p>
+      <p class="prof-text">Saitama, Japan</p>
     </v-col>
   </v-row>
 
@@ -27,9 +27,14 @@
   <v-divider></v-divider>
 
   <!-- AboutMe section -->
-  <p class="text-center font-weight-bold mt-5">About Me</p>
-  <v-col class="mx-auto" cols="6">
-    <p class="mb-5">
+  <p class="text-h2 text-center mt-5">About Me</p>
+  <v-row class="justify-center">
+    <v-col cols="3">
+      <v-divider color="primary" thickness="5" class="mb-5"></v-divider>
+    </v-col>
+  </v-row>
+  <v-col class="mx-auto" cols="6" xl="3">
+    <p>
       <span v-for="(line, index) in aboutMe" :key="index">
         {{ line }}<br />
       </span>
