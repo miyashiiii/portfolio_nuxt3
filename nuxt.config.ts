@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   css: ["@/assets/main.scss", "vuetify/lib/styles/main.sass"],
   vite: {
     ssr: {
-      noExternal: ["vuetify"],
+      noExternal: [/\.css$/, /^vuetify/],
     },
   },
 });
