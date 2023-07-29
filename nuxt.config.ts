@@ -2,7 +2,6 @@
 import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
   modules: ["@nuxtjs/google-fonts"],
-
   googleFonts: {
     download: true,
     families: {
@@ -11,7 +10,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   build: {
-    transpile: ["vuetify"],
+    transpile: [/vuetify/],
   },
   hooks: {
     "vite:extendConfig": (config) => {
