@@ -11,19 +11,6 @@
     </v-col>
   </v-row>
 
-  <!-- Links section -->
-  <v-row class="mb-5 justify-center">
-    <div
-      v-for="(link, index) in links"
-      :key="index"
-      class="mx-3"
-      :href="link.url"
-    >
-      <a>
-        <v-img :src="link.icon" height="32" width="32"></v-img>
-      </a>
-    </div>
-  </v-row>
   <v-divider></v-divider>
 
   <!-- AboutMe section -->
@@ -40,6 +27,20 @@
       </span>
     </p>
   </v-col>
+
+  <!-- Links section -->
+  <v-row class="mt-5 justify-center">
+    <div
+      v-for="(link, index) in links"
+      :key="index"
+      class="mx-3"
+      :href="link.url"
+    >
+      <a>
+        <v-img :src="link.icon" height="32" width="32"></v-img>
+      </a>
+    </div>
+  </v-row>
 </template>
 
 <script>
