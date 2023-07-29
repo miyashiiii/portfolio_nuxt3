@@ -6,14 +6,7 @@ export default defineNuxtConfig({
   googleFonts: {
     download: true,
     families: {
-      "IBM Plex Mono": true,
-      "Josefin+Sans": true,
       Ubuntu: true,
-      Lato: [100, 300],
-      Raleway: {
-        wght: [100, 400],
-        ital: [100],
-      },
     },
   },
   devtools: { enabled: true },
