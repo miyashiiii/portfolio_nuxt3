@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   build: {
-    transpile: [/vuetify/],
+    transpile: ["vuetify"],
   },
   css: ["@/assets/main.scss"],
 });
