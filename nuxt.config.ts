@@ -1,6 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import vuetify from "vite-plugin-vuetify";
+
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/google-fonts"],
+  modules: [
+    "@nuxtjs/google-fonts",
+    async (options, nuxt) => {
+      nuxt.hooks.hook("vite:extendConfig", (config) =>
+        config.plugins.push(vuetify())
+      );
+    },
+  ],
   googleFonts: {
     download: true,
     families: {
@@ -11,5 +20,10 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
-  css: ["@/assets/main.scss"],
+  css: ["@/assets/main.scss", "vuetify/lib/styles/main.sass"],
+  vite: {
+    ssr: {
+      noExternal: ["vuetify"],
+    },
+  },
 });
