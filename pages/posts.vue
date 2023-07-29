@@ -28,7 +28,6 @@
 import posts from '~/assets/posts.json'
 export default {
   data() {
-    console.log(posts)
     return {
       blogPosts: posts,
     };
