@@ -6,6 +6,8 @@ RUN apt-get install -y nodejs
 
 WORKDIR /usr/src/app
 
+COPY package*.json ./
+
 RUN npm ci
 
 COPY . .
