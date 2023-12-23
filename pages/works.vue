@@ -2,11 +2,11 @@
   <p class="text-h2 text-center mt-5">Works</p>
   <v-row class="justify-center mb-5">
     <v-col cols="3">
-      <v-divider color="primary" thickness="5" class="my-5"></v-divider>
+      <v-divider color="primary" thickness="3" class="mb-5"></v-divider>
     </v-col>
   </v-row>
   <v-row class="mb-5 justify-center" max-width="75%">
-    <v-col v-for="(work, index) in works" :key="index" cols="4" xl="3">
+    <v-col v-for="(work, index) in works" :key="index" cols="12" md="3">
       <v-card class="mb-3" :href="work.url">
         <v-img :src="work.thumbnail" height="180" contain></v-img>
         <v-card-title>{{ work.title }}</v-card-title>

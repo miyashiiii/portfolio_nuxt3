@@ -2,11 +2,11 @@
   <p class="text-h2 text-center mt-5">Posts</p>
   <v-row class="justify-center mb-5">
     <v-col cols="3">
-      <v-divider color="primary" thickness="5" class="my-5"></v-divider>
+      <v-divider color="primary" thickness="3" class="mb-2"></v-divider>
     </v-col>
   </v-row>
   <v-row>
-    <v-col cols="8" xl="4" class="mx-auto">
+    <v-col cols="12" xl="4" class="mx-auto">
       <v-list lines="one">
         <v-divider></v-divider>
         <div v-for="(item, index) in blogPosts" :key="item.title">

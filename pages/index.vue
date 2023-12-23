@@ -17,7 +17,7 @@
   <p class="text-h2 text-center mt-5">About Me</p>
   <v-row class="justify-center">
     <v-col cols="3">
-      <v-divider color="primary" thickness="5" class="mb-5"></v-divider>
+      <v-divider color="primary" thickness="3" class="mb-5"></v-divider>
     </v-col>
   </v-row>
   <v-col class="mx-auto" cols="6" xl="3">
@@ -36,7 +36,7 @@
       class="mx-3"
       :href="link.url"
     >
-      <a>
+      <a :href="link.url">
         <v-img :src="link.icon" height="32" width="32"></v-img>
       </a>
     </div>
