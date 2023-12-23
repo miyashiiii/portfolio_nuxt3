@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import vuetify from "vite-plugin-vuetify";
+// import vuetify from "vite-plugin-vuetify";
 
 export default defineNuxtConfig({
   app: {
@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     async (options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) =>
         // @ts-ignore
-        config.plugins.push(vuetify())
+        // config.plugins.push(vuetify())
+        config
       );
     },
   ],
@@ -25,7 +26,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
-  css: ["@/assets/main.scss", "vuetify/lib/styles/main.sass"],
+  // css: ["@/assets/main.scss", "vuetify/lib/styles/main.sass"],
   vite: {
     ssr: {
       noExternal: [/\.css$/, /^vuetify/],
