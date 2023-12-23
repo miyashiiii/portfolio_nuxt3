@@ -2,6 +2,9 @@
 import vuetify from "vite-plugin-vuetify";
 
 export default defineNuxtConfig({
+  app: {
+    baseURL: "/portfolio_nuxt3/",
+  },
   modules: [
     "@nuxtjs/google-fonts",
     async (options, nuxt) => {
