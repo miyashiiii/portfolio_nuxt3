@@ -14,7 +14,6 @@
     "@vue/test-utils": "^2.4.3",
     "nuxt": "^3.6.5",
     "resize-observer-polyfill": "^1.5.1",
-    "vite-plugin-vuetify": "^1.0.2",
     "vitest": "^1.1.0"
   },
   "dependencies": {
