@@ -2,8 +2,12 @@
   <header>
     <!-- TODO heightを設定しないと要素が表示されない -->
     <q-layout view="lHh lpr lFf" container style="height: 80px">
-      <q-header bordered class=" text-white row justify-center" style="background-color: #5694b3;">
-        <q-toolbar style="max-width: 900px;">
+      <q-header
+        bordered
+        class="text-white row justify-center"
+        style="background-color: #5694b3"
+      >
+        <q-toolbar style="max-width: 900px">
           <q-toolbar-title>
             <NuxtLink
               to="/"
@@ -14,8 +18,14 @@
             </NuxtLink>
           </q-toolbar-title>
 
-          <q-btn flat  dense to="/posts" label="posts" class="text-bold" />
-          <q-btn flat dense to="/works" label="works" class="q-ml-lg text-bold" />
+          <q-btn flat dense to="/posts" label="posts" class="text-bold" />
+          <q-btn
+            flat
+            dense
+            to="/works"
+            label="works"
+            class="q-ml-lg text-bold"
+          />
         </q-toolbar>
       </q-header>
     </q-layout>

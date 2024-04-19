@@ -11,16 +11,24 @@
           :style="$q.screen.lt.md ? 'width:75%' : 'width: 280px;'"
           class=""
         >
-          <a :href="post.url" class="row items-center justify-center bg-indigo-1">
-              <q-img :src="post.thumbnail" fit="scale-down" style="height:150px"/>
+          <a
+            :href="post.url"
+            class="row items-center justify-center bg-indigo-1"
+          >
+            <q-img
+              :src="post.thumbnail"
+              fit="scale-down"
+              style="height: 150px"
+            />
           </a>
           <q-card-section>
             <a
               :href="post.url"
               class="text-bold text-black"
               style="text-decoration: none"
-              >{{ post.title }}</a
             >
+              {{ post.title }}
+            </a>
             <div class="q-mt-xs text-grey-8">{{ post.subtitle }}</div>
             <q-chip
               v-for="tag in post.tags"
@@ -38,7 +46,6 @@
 definePageMeta({
   layout: "default",
 });
-
 
 const works = [
   {

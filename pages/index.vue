@@ -1,6 +1,5 @@
 <template>
   <div class="fixed-center full-width q-gutter-y-xl">
-
     <div class="row justify-center items-center q-gutter-x-lg">
       <div>
         <q-img
