@@ -45,15 +45,15 @@ const getIconPath = (url: string) => {
   // ドメイン名に基づいてアイコンのパスを返す
   const domain = getDomain(url);
   if (domain.includes("hatenablog")) {
-    return "./sns/hatenablog.svg";
+    return "/sns/hatenablog.svg";
   } else if (domain.includes("qiita")) {
-    return "./sns/qiita.png";
+    return "/sns/qiita.png";
   } else if (domain.includes("note")) {
-    return "./sns/note.png";
+    return "/sns/note.png";
   } else if (domain.includes("zenn")) {
-    return "./sns/zenn.png";
+    return "/sns/zenn.png";
   } else if (domain.includes("docswell")) {
-    return "./sns/docswell.png";
+    return "/sns/docswell.png";
   } else {
     return "./sns/miyashiiii.png";
   }
