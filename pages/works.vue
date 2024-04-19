@@ -13,7 +13,7 @@
         >
           <a
             :href="post.url"
-            class="row items-center justify-center bg-indigo-1"
+            class="row items-center justify-center bg-grey-2"
           >
             <q-img
               :src="post.thumbnail"

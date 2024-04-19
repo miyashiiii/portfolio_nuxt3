@@ -1,13 +1,12 @@
 <template>
   <!-- TODO heightを設定しないと要素が表示されない -->
   <q-header
-    bordered
     class="text-white row justify-center"
     style="background-color: #5694b3"
   >
     <!-- PC向け -->
     <div class="gt-sm">
-      <q-toolbar style="max-width: 900px">
+      <q-toolbar style="width: 900px" class="row justify-between">
         <q-toolbar-title>
           <NuxtLink
             to="/"

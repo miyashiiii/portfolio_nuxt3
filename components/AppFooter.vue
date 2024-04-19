@@ -1,7 +1,6 @@
 <template>
   <!-- TODO heightを設定しないと要素が表示されない -->
   <q-footer
-    bordered
     class="text-white row justify-center"
     style="background-color: #5694b3"
   >
@@ -12,9 +11,10 @@
       <q-toolbar>
         <q-tabs
           no-caps
-          indicator-color="indigo-8"
+          indicator-color="white"
           class="text-white"
           v-model="tab"
+          switch-indicator
         >
           <NuxtLink to="/posts" style="text-decoration: none; color: inherit">
             <q-tab name="posts">
