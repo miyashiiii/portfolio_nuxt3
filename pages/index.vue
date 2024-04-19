@@ -1,6 +1,7 @@
 <template>
-  <div class = "fixed-center full-width q-gutter-y-lg">
-    <div class="row justify-center items-center">
+  <div class="fixed-center full-width q-gutter-y-xl">
+
+    <div class="row justify-center items-center q-gutter-x-lg">
       <div>
         <q-img
           :src="imagePath"
@@ -8,10 +9,10 @@
           style="height: 300px; width: 300px"
         />
       </div>
-      <div>
-        <p class="prof-text text-weight-bold">miyashiiii</p>
-        <p class="prof-text">Software engineer</p>
-        <p class="prof-text">Saitama, Japan</p>
+      <div class="justify-center q-gutter-sm">
+        <div class="prof-text text-weight-bold text-center">miyashiiii</div>
+        <div class="prof-text text-center">Software engineer</div>
+        <div class="prof-text text-center">Saitama, Japan</div>
       </div>
     </div>
 
@@ -52,6 +53,6 @@ const links = [
   {
     url: "https://sizu.me/miyashiiii",
     icon: "/sns/sizu.png",
-  }
+  },
 ];
 </script>

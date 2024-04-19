@@ -2,7 +2,7 @@
   <header>
     <!-- TODO heightを設定しないと要素が表示されない -->
     <q-layout view="lHh lpr lFf" container style="height: 80px">
-      <q-header bordered class="bg-white text-primary row justify-center">
+      <q-header bordered class=" text-white row justify-center" style="background-color: #5694b3;">
         <q-toolbar style="max-width: 900px;">
           <q-toolbar-title>
             <NuxtLink
