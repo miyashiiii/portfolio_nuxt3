@@ -18,6 +18,7 @@
     "title": "分割キーボード BAROCCO MD600v3 RGB を買った話",
     "url": "https://miyashiiii.hatenablog.jp/entry/2023/12/21/000000",
     "date": "2023/12/21",
+    "img": "20231221_md600v3.jpg",
     "tags": [
       "キーボード"
     ]
@@ -26,6 +27,7 @@
     "title": "admindocsでDjangoプロジェクトのドキュメントを自動生成する",
     "url": "https://qiita.com/miyashiiii/items/9ac846d3c55f39407a8a",
     "date": "2023/12/13",
+    "img": "20231213_admindocs.avif",
     "tags": [
       "Django"
     ]
@@ -34,6 +36,7 @@
     "title": "PyCon APAC 2023に参加しました",
     "url": "https://miyashiiii.hatenablog.jp/entry/2023/10/30/224343",
     "date": "2023/10/30",
+    "img": "20231030_pyconapac.jpg",
     "tags": [
       "Python",
       "イベント参加"
@@ -41,8 +44,9 @@
   },
   {
     "title": "GraphQLライブラリStrawberryのDjangoプロジェクトへの適用事例",
-    "url": "https://www.docswell.com/s/miyashiiii/Z98287/strawberry-django-casestudy",
+    "url": "https://www.docswell.com/s/miyashiiii/Z98287-strawberry-django-casestudy",
     "date": "2023/09/23",
+    "img": "20231009_strawberry_django.webp",
     "tags": [
       "Python",
       "Django",
@@ -55,6 +59,7 @@
     "title": "PRODUCTION READY GRAPHQLを読む: 2章. GraphQLスキーマ設計 ①",
     "url": "https://miyashiiii.hatenablog.jp/entry/2023/09/08/093100",
     "date": "2023/09/08",
+    "img":"production_ready_graphql.jpeg",
     "tags": [
       "Python",
       "GraphQL",
@@ -65,6 +70,7 @@
     "title": "PRODUCTION READY GRAPHQLを読む: 1章. GraphQL入門",
     "url": "https://miyashiiii.hatenablog.jp/entry/2023/07/22/213724",
     "date": "2023/07/22",
+    "img":"production_ready_graphql.jpeg",
     "tags": [
       "Python",
       "GraphQL",
@@ -86,6 +92,7 @@
     "title": "初めてのFlutterアプリを開発・リリースするまでに使用したツール・パッケージ",
     "url": "https://zenn.dev/miyashiiii/articles/dbb4c1fd7ba226",
     "date": "2021/08/16",
+    "img": "20210816_flutter_app.png",
     "tags": [
       "個人開発",
       "Dart",
@@ -104,6 +111,7 @@
     "title": "スクショをスマホ画像にはめ込んでストア掲載用画像を作成する",
     "url": "https://note.com/mysh_iiii/n/nb3998ab4eb8e",
     "date": "2021/07/12",
+    "img":"20210712_sp_store_image.webp",
     "tags": [
       "個人開発"
     ]
@@ -121,6 +129,7 @@
     "title": "デュアルキーボード環境を構築した話",
     "url": "https://miyashiiii.hatenablog.jp/entry/2023/07/22/184023",
     "date": "2021/02/13",
+    "img": "20210213_dual_keyboard.png",
     "tags": [
       "キーボード"
     ]
@@ -153,6 +162,7 @@
     "title": "codesignは、キーチェーンに含まれるキー\"access\"へアクセスしようとしています",
     "url": "https://qiita.com/miyashiiii/items/9351d881edf7da897607",
     "date": "2018/12/04",
+    "img": "20181204_codesign.avif",
     "tags": [
       "macOS"
     ]
@@ -185,6 +195,7 @@
     "title": "20代エンジニアのためのプログラマー勉強法 ～Matzがおくる「生涯エンジニア」になるためのプログラミングとの向き合い方～",
     "url": "https://qiita.com/miyashiiii/items/ec19a1b50308133e528e",
     "date": "2018/10/01",
+    "img": "20181001_matz.png",
     "tags": [
       "イベント参加"
     ]
