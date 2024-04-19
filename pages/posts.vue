@@ -24,7 +24,7 @@
             />
             <q-img
               v-else
-              :src="getIconPath(post.url)"
+              :src="getServiceFromUrl(post.url).icon"
               style="height: 50px; width: 50px"
             />
           </a>
@@ -36,7 +36,9 @@
             >
               {{ post.title }}
             </a>
-            <div class="q-mt-xs text-grey-8">{{ post.date }}</div>
+            <div class="q-mt-xs text-grey-8">
+              {{ post.date }} - {{ getServiceFromUrl(post.url).name }}
+            </div>
             <q-chip
               v-for="tag in post.tags"
               class="text-caption q-ml-none"
@@ -53,40 +55,32 @@
 definePageMeta({
   layout: "default",
 });
-type Post = {
-  title: string;
-  url: string;
-  date: string;
-  tags: string[];
-  img: string;
-};
+
 import postsJson from "./assets/posts.json";
 
 const posts = ref(postsJson);
 
-const getDomain = (url: string) => {
-  return new URL(url).hostname;
-};
-
-const getImgPath = (imgName: string) => {
+const getImgPath = (imgName: string): string => {
   return `/posts/${imgName}`;
 };
 
-const getIconPath = (url: string) => {
-  // ドメイン名に基づいてアイコンのパスを返す
-  const domain = getDomain(url);
-  if (domain.includes("hatenablog")) {
-    return "/sns/hatenablog.svg";
-  } else if (domain.includes("qiita")) {
-    return "/sns/qiita.png";
-  } else if (domain.includes("note")) {
-    return "/sns/note.png";
-  } else if (domain.includes("zenn")) {
-    return "/sns/zenn.png";
-  } else if (domain.includes("docswell")) {
-    return "/sns/docswell.png";
+type Service = {
+  name: string;
+  icon: string;
+};
+const getServiceFromUrl = (url: string): Service => {
+  if (url.includes("hatenablog")) {
+    return { name: "はてなブログ", icon: "/sns/hatenablog.svg" };
+  } else if (url.includes("qiita")) {
+    return { name: "Qiita", icon: "/sns/qiita.png" };
+  } else if (url.includes("note")) {
+    return { name: "note", icon: "/sns/note.png" };
+  } else if (url.includes("zenn")) {
+    return { name: "Zenn", icon: "/sns/zenn.png" };
+  } else if (url.includes("docswell")) {
+    return { name: "Docswell", icon: "/sns/docswell.png" };
   } else {
-    return "/sns/miyashiiii.png";
+    throw new Error("invalid url");
   }
 };
 </script>
