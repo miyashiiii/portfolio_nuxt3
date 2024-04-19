@@ -95,6 +95,8 @@ definePageMeta({
   layout: "default",
 });
 
+// TODO 一旦無視。後でちゃんと対応したい #6
+// @ts-ignore
 import postsJson from "./assets/posts.json";
 
 const posts = ref(postsJson);
