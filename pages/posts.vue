@@ -43,14 +43,14 @@
       </div>
 
       <!-- スマホ向け -->
-      <div class="q-pa-md row items-start q-gutter-lg lt-md">
+      <div class="q-pa-md lt-md">
         <q-list separator>
           <a
             v-for="post in posts"
             :href="post.url"
             style="text-decoration: none"
           >
-            <q-item class="q-gutter-x-lg">
+            <q-item class="q-gutter-x-lg items-center">
               <div
                 style="width: 120px; height: 80px"
                 class="row justify-center items-center bg-grey-1"

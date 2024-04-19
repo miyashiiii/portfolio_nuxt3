@@ -1,6 +1,9 @@
 <template>
-  <div>
+  <q-layout view="hHh lpr fFf" >
     <AppHeader />
-    <slot />
-  </div>
+    <q-page-container>
+      <slot />
+    </q-page-container>
+    <AppFooter />
+  </q-layout>
 </template>
