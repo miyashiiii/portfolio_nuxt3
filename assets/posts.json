@@ -1,5 +1,20 @@
 [
   {
+    "title": "副業を始めた",
+    "url": "https://miyashiiii.hatenablog.jp/entry/2024/04/17/092615",
+    "date": "2024/04/17",
+    "tags": []
+  },
+  {
+    "title": "easy-thumbnailsで発生するInvalidImageFormatErrorの調査メモ",
+    "url": "https://miyashiiii.hatenablog.jp/entry/2024/04/16/222300",
+    "date": "2024/04/16",
+    "tags": [
+      "Python",
+      "Django"
+    ]
+  },
+  {
     "title": "分割キーボード BAROCCO MD600v3 RGB を買った話",
     "url": "https://miyashiiii.hatenablog.jp/entry/2023/12/21/000000",
     "date": "2023/12/21",
@@ -20,7 +35,8 @@
     "url": "https://miyashiiii.hatenablog.jp/entry/2023/10/30/224343",
     "date": "2023/10/30",
     "tags": [
-      "Python"
+      "Python",
+      "イベント参加"
     ]
   },
   {
@@ -120,7 +136,10 @@
   {
     "title": "byobu操作まとめ",
     "url": "https://qiita.com/miyashiiii/items/90ba726dd331ae103b7b",
-    "date": "2019/04/16"
+    "date": "2019/04/16",
+    "tags": [
+      "Linux"
+    ]
   },
   {
     "title": "Pipfile/Pipfile.lockの必要性 -requirements.txtを用いる手法と比較して-",
@@ -165,7 +184,10 @@
   {
     "title": "20代エンジニアのためのプログラマー勉強法 ～Matzがおくる「生涯エンジニア」になるためのプログラミングとの向き合い方～",
     "url": "https://qiita.com/miyashiiii/items/ec19a1b50308133e528e",
-    "date": "2018/10/01"
+    "date": "2018/10/01",
+    "tags": [
+      "イベント参加"
+    ]
   },
   {
     "title": "pycharmでpipを実行するとAttributeError",
