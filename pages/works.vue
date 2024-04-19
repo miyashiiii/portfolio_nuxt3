@@ -51,7 +51,7 @@ const works = [
   {
     title: "ポートフォリオ",
     subtitle: "このサイト",
-    thumbnail: "/works/miyashiiii.png",
+    thumbnail: "/works/portfolio.png",
     url: "/",
     tags: ["Nuxt", "Quasar", "GitHub Pages"],
   },
