@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.9",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "nuxt-quasar-ui": "^2.0.7",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "vitest": "^1.5.0"
   }
 }
