@@ -45,7 +45,7 @@
       </div>
 
       <!-- スマホ向け -->
-      <div class="q-pa-md lt-md">
+      <div class="q-pt-md lt-md">
         <q-list separator>
           <a
             v-for="post in posts"
