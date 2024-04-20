@@ -1,27 +1,36 @@
 <template>
-  <div class="fixed-center full-width q-gutter-y-xl">
-    <!-- プロフィール -->
-    <div class="row justify-center items-center q-gutter-x-lg">
-      <q-img :src="imagePath" no-spinner style="height: 300px; width: 300px" />
-      <div class="justify-center q-gutter-sm">
-        <div class="prof-text text-weight-bold text-center">miyashiiii</div>
-        <div class="prof-text text-center">Software engineer</div>
-        <div class="prof-text text-center">Saitama, Japan</div>
+  <div
+    class="fixed-center full-width q-gutter-y-xl row justify-center items-center"
+  >
+    <div class="col">
+      <div class="row justify-center items-center q-gutter-x-lg">
+        <q-img
+          :src="imagePath"
+          no-spinner
+          style="height: 300px; width: 300px"
+        />
+        <div class="justify-center q-gutter-sm">
+          <div class="prof-text text-weight-bold text-center">miyashiiii</div>
+          <div class="prof-text text-center">Software engineer</div>
+          <div class="prof-text text-center">Saitama, Japan</div>
+        </div>
       </div>
-    </div>
 
-    <!-- SNSリンク -->
-    <div class="row justify-center">
-      <div v-for="(link, index) in links" :key="index" class="q-mx-md">
-        <a :href="link.url">
-          <q-img
-            no-spinner
-            :src="link.icon"
-            style="height: 32px; width: 32px"
-          />
-        </a>
+      <!-- SNSリンク -->
+      <div class="row justify-center">
+        <div v-for="(link, index) in links" :key="index" class="q-mx-md">
+          <a :href="link.url">
+            <q-img
+              no-spinner
+              :src="link.icon"
+              style="height: 32px; width: 32px"
+            />
+          </a>
+        </div>
       </div>
     </div>
+    <!-- copyright -->
+    <!-- <div class="row justify-center">&copy; 2024 miyashiiii</div> -->
   </div>
 </template>
 
@@ -38,7 +47,7 @@ const links = [
   },
   {
     url: "https://miyashiiii.hatenablog.jp/",
-    icon: "/sns/hatenablog.png",
+    icon: "/sns/hatenablog.svg",
   },
   {
     url: "https://qiita.com/miyashiiii",
