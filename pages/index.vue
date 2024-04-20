@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="fixed-center full-width q-gutter-y-xl row justify-center items-center"
-  >
-    <div class="col">
+  <div class="fixed-center full-width row justify-center items-center">
+    <div class="col q-gutter-y-lg">
       <div class="row justify-center items-center q-gutter-x-lg">
         <q-img
           :src="imagePath"
