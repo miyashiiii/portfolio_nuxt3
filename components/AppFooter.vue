@@ -1,9 +1,6 @@
 <template>
   <!-- SP向けのみ -->
-  <q-footer
-    class="text-white lt-md"
-    style="background-color: #5694b3; height: 50px"
-  >
+  <q-footer class="text-white lt-md" style="background-color: #5694b3">
     <q-toolbar class="row justify-center">
       <q-tabs
         no-caps

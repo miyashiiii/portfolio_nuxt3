@@ -1,5 +1,4 @@
 <template>
-  <!-- TODO heightを設定しないと要素が表示されない -->
   <q-header class="text-black row justify-center bg-grey-3">
     <!-- PC向け -->
     <div class="gt-sm">
@@ -14,8 +13,6 @@
           </NuxtLink>
         </q-toolbar-title>
 
-        <!-- <q-btn flat dense to="/posts" label="posts" class="text-bold" /> -->
-        <!-- <q-btn flat dense to="/works" label="works" class="q-ml-lg text-bold" /> -->
         <q-tabs
           v-model="tab"
           no-caps
@@ -24,10 +21,10 @@
           style="font-size: 16px"
         >
           <NuxtLink to="/posts" style="text-decoration: none; color: inherit">
-            <q-tab name="posts"> Posts </q-tab>
+            <q-tab name="posts"> POSTS </q-tab>
           </NuxtLink>
           <NuxtLink to="/works" style="text-decoration: none; color: inherit">
-            <q-tab name="works"> Works </q-tab>
+            <q-tab name="works"> WORKS </q-tab>
           </NuxtLink>
         </q-tabs>
       </q-toolbar>
