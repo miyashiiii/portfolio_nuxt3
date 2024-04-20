@@ -1,8 +1,17 @@
 <template>
   <div class="row justify-center">
-    <div style="max-width: 950px">
+    <div style="width: 940px">
+      <div v-if="isValidQuery" class="q-mt-md q-ml-md">
+        タグ:
+        <q-chip
+          removable
+          class="text-caption"
+          :label="route.query.tag"
+          @remove="() => $router.push('/posts')"
+        />
+      </div>
       <!-- PC向け -->
-      <div class="q-pa-lg row items-start q-gutter-lg gt-sm justify-between">
+      <div class="q-pa-lg row items-start q-gutter-lg gt-sm">
         <q-card v-for="post in posts" :href="post.url" style="width: 280px">
           <a
             :href="post.url"
@@ -35,61 +44,66 @@
               <span class="text-black">{{ post.date }}</span> -
               {{ getServiceFromUrl(post.url).name }}
             </div>
-            <q-chip
+            <NuxtLink
+              :to="`/posts?tag=${tag}`"
+              style="text-decoration: none; color: inherit"
               v-for="tag in post.tags"
-              class="text-caption q-ml-none"
-              :label="tag"
-            />
+            >
+              <q-chip class="text-caption q-ml-none" :label="tag" />
+            </NuxtLink>
           </q-card-section>
         </q-card>
       </div>
+    </div>
 
-      <!-- スマホ向け -->
-      <div class="q-pt-md lt-md">
-        <q-list separator>
-          <a
-            v-for="post in posts"
-            :href="post.url"
-            style="text-decoration: none"
-          >
-            <q-item class="q-gutter-x-md items-center bg-white">
-              <div
-                style="width: 120px; height: 80px"
-                class="row justify-center items-center bg-grey-3"
-              >
-                <q-img
-                  v-if="post.img"
-                  :src="getImgPath(post.img)"
-                  fit="scale-down"
-                  style="height: 80px"
-                  no-spinner
-                />
-                <q-img
-                  v-else
-                  :src="getServiceFromUrl(post.url).icon"
-                  style="height: 50px; width: 50px"
-                  no-spinner
-                />
-              </div>
-              <div class="col">
-                <div class="text-black text-bold">
-                  {{ post.title }}
-                </div>
-                <div class="q-mt-xs text-grey-8">
-                  <span class="text-black">{{ post.date }}</span> -
-                  {{ getServiceFromUrl(post.url).name }}
-                </div>
-                <q-chip
-                  v-for="tag in post.tags"
-                  class="text-caption q-ml-none"
-                  :label="tag"
-                />
-              </div>
-            </q-item>
-            <q-separator color="grey-4" />
+    <!-- スマホ向け -->
+    <div class="q-mt-sm lt-md">
+      <q-list separator>
+        <q-item
+          class="q-gutter-x-md items-center bg-white"
+          v-for="post in posts"
+        >
+          <a :href="post.url" style="text-decoration: none">
+            <div
+              style="width: 120px; height: 80px"
+              class="row justify-center items-center bg-grey-3"
+            >
+              <q-img
+                v-if="post.img"
+                :src="getImgPath(post.img)"
+                fit="scale-down"
+                style="height: 80px"
+                no-spinner
+              />
+              <q-img
+                v-else
+                :src="getServiceFromUrl(post.url).icon"
+                style="height: 50px; width: 50px"
+                no-spinner
+              />
+            </div>
           </a>
-        </q-list>
-      </div>
+          <div class="col">
+            <a :href="post.url" style="text-decoration: none">
+              <div class="text-black text-bold">
+                {{ post.title }}
+              </div>
+              <div class="q-mt-xs text-grey-8">
+                <span class="text-black">{{ post.date }}</span> -
+                {{ getServiceFromUrl(post.url).name }}
+              </div>
+            </a>
+            <NuxtLink
+              :to="`/posts?tag=${tag}`"
+              style="text-decoration: none; color: inherit"
+              v-for="tag in post.tags"
+            >
+              <q-chip class="text-caption q-ml-none" :label="tag" />
+            </NuxtLink>
+          </div>
+        </q-item>
+        <q-separator color="grey-4" />
+      </q-list>
     </div>
   </div>
 </template>
@@ -99,11 +113,40 @@ definePageMeta({
   layout: "default",
 });
 
+type Post = {
+  title: string;
+  date: string;
+  url: string;
+  tags: string[];
+  img?: string;
+};
+import { is } from "quasar";
 // TODO 一旦無視。後でちゃんと対応したい #6
 // @ts-ignore
 import postsJson from "./assets/posts.json";
+const posts: Ref<Post[]> = ref([]);
+const isValidQuery = ref(false);
+const route = useRoute();
 
-const posts = ref(postsJson);
+watchEffect(() => {
+  posts.value = [];
+  if (!route.query.tag) {
+    posts.value = postsJson;
+    isValidQuery.value = false;
+    return;
+  }
+  for (const post of postsJson) {
+    if (post.tags.includes(route.query.tag)) {
+      posts.value.push(post);
+    }
+  }
+  if (posts.value.length === 0) {
+    posts.value = postsJson;
+    isValidQuery.value = false;
+  } else {
+    isValidQuery.value = true;
+  }
+});
 
 const getImgPath = (imgName: string): string => {
   return `/posts/${imgName}`;

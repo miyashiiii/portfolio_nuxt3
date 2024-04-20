@@ -41,7 +41,7 @@ const route = useRoute();
 watchEffect(() => {
   if (route.path === "/") {
     tab.value = "index";
-  } else if (route.path === "/posts") {
+  } else if (route.path.startsWith("/posts")) {
     tab.value = "posts";
   } else if (route.path === "/works") {
     tab.value = "works";
