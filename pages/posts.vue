@@ -1,8 +1,8 @@
 <template>
-  <div class="q-pa-md row justify-center">
+  <div class="row justify-center">
     <div style="max-width: 950px">
       <!-- PC向け -->
-      <div class="q-pa-md row items-start q-gutter-lg gt-sm justify-between">
+      <div class="q-pa-lg row items-start q-gutter-lg gt-sm justify-between">
         <q-card v-for="post in posts" :href="post.url" style="width: 280px">
           <a
             :href="post.url"
@@ -14,11 +14,13 @@
               :src="getImgPath(post.img)"
               fit="scale-down"
               style="height: 120px"
+              no-spinner
             />
             <q-img
               v-else
               :src="getServiceFromUrl(post.url).icon"
               style="height: 50px; width: 50px"
+              no-spinner
             />
           </a>
           <q-card-section>
@@ -60,11 +62,13 @@
                   :src="getImgPath(post.img)"
                   fit="scale-down"
                   style="height: 80px"
+                  no-spinner
                 />
                 <q-img
                   v-else
                   :src="getServiceFromUrl(post.url).icon"
                   style="height: 50px; width: 50px"
+                  no-spinner
                 />
               </div>
               <div class="col">

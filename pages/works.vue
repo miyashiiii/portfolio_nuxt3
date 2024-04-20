@@ -1,8 +1,8 @@
 <template>
-  <div class="q-pa-md row justify-center">
+  <div class="row justify-center">
     <div style="max-width: 950px">
       <div
-        class="q-pa-md row items-start q-gutter-lg"
+        class="q-pt-lg row items-start q-gutter-lg"
         :class="$q.screen.lt.md ? 'justify-around' : 'justify-between'"
       >
         <q-card
@@ -11,14 +11,12 @@
           :style="$q.screen.lt.md ? 'width:75%' : 'width: 280px;'"
           class=""
         >
-          <a
-            :href="post.url"
-            class="row items-center justify-center bg-grey-2"
-          >
+          <a :href="post.url" class="row items-center justify-center bg-grey-2">
             <q-img
               :src="post.thumbnail"
               fit="scale-down"
               style="height: 150px"
+              no-spinner
             />
           </a>
           <q-card-section>
