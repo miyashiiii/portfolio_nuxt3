@@ -120,6 +120,8 @@ const getServiceFromUrl = (url: string): Service => {
     return { name: "Zenn", icon: "/sns/zenn.png" };
   } else if (url.includes("docswell")) {
     return { name: "Docswell", icon: "/sns/docswell.png" };
+  } else if (url.includes("sizu.me")) {
+    return { name: "しずかなインターネット", icon: "/sns/sizu.png" };
   } else {
     throw new Error("invalid url");
   }
