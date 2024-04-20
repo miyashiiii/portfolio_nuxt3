@@ -6,7 +6,7 @@
         <q-card v-for="post in posts" :href="post.url" style="width: 280px">
           <a
             :href="post.url"
-            class="row items-center justify-center bg-grey-1"
+            class="row items-center justify-center"
             style="height: 120px"
           >
             <q-img
@@ -52,10 +52,10 @@
             :href="post.url"
             style="text-decoration: none"
           >
-            <q-item class="q-gutter-x-lg items-center">
+            <q-item class="q-gutter-x-lg items-center bg-white q-ml-none">
               <div
                 style="width: 120px; height: 80px"
-                class="row justify-center items-center bg-grey-1"
+                class="row justify-center items-center bg-grey-3"
               >
                 <q-img
                   v-if="post.img"

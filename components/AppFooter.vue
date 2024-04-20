@@ -38,5 +38,16 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const tab = ref("images");
+const tab = ref("works");
+const route = useRoute();
+
+watchEffect(() => {
+  if (route.path === "/") {
+    tab.value = "index";
+  } else if (route.path === "/posts") {
+    tab.value = "posts";
+  } else if (route.path === "/works") {
+    tab.value = "works";
+  }
+});
 </script>
