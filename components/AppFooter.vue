@@ -24,7 +24,7 @@
           </NuxtLink>
           <NuxtLink to="/works" style="text-decoration: none; color: inherit">
             <q-tab name="works">
-              <q-icon name="work" />
+              <q-icon name="palette" />
               Works
             </q-tab>
           </NuxtLink>
