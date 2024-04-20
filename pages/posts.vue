@@ -52,7 +52,7 @@
             :href="post.url"
             style="text-decoration: none"
           >
-            <q-item class="q-gutter-x-lg items-center bg-white q-ml-none">
+            <q-item class="q-gutter-x-md items-center bg-white">
               <div
                 style="width: 120px; height: 80px"
                 class="row justify-center items-center bg-grey-3"
