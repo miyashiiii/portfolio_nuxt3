@@ -10,20 +10,20 @@
         switch-indicator
       >
         <NuxtLink to="/" style="text-decoration: none; color: inherit">
-          <q-tab name="index">
-            <q-icon name="home" />
+          <q-tab name="index" class="q-py-xs" style="width: 80px">
+            <q-icon name="home" size="sm" />
             Top
           </q-tab>
         </NuxtLink>
         <NuxtLink to="/posts" style="text-decoration: none; color: inherit">
-          <q-tab name="posts">
-            <q-icon name="description" />
+          <q-tab name="posts" class="q-py-xs" style="width: 80px">
+            <q-icon name="description" size="sm" />
             Posts
           </q-tab>
         </NuxtLink>
         <NuxtLink to="/works" style="text-decoration: none; color: inherit">
-          <q-tab name="works">
-            <q-icon name="palette" />
+          <q-tab name="works" class="q-py-xs" style="width: 80px">
+            <q-icon name="palette" size="sm" />
             Works
           </q-tab>
         </NuxtLink>
@@ -31,10 +31,12 @@
           to="https://github.com/miyashiiii/miyashiiii.github.io"
           style="text-decoration: none; color: inherit"
         >
-          <q-tab name="source">
-            <q-icon name="fa-brands fa-github" />
-            source
-          </q-tab>
+          <div class="col q-py-xs" style="width: 80px">
+            <div class="row justify-center">
+              <q-icon name="fa-brands fa-github" size="sm" />
+            </div>
+            <div class="text-center">Source <q-icon name="open_in_new" /></div>
+          </div>
         </NuxtLink>
       </q-tabs>
     </q-toolbar>
