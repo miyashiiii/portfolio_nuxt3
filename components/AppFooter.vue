@@ -1,6 +1,6 @@
 <template>
   <!-- SP向けのみ -->
-  <q-footer class="text-white lt-md" style="background-color: #5694b3">
+  <q-footer class="text-white" style="background-color: #5694b3">
     <q-toolbar class="row justify-center">
       <q-tabs
         no-caps
@@ -25,6 +25,15 @@
           <q-tab name="works">
             <q-icon name="palette" />
             Works
+          </q-tab>
+        </NuxtLink>
+        <NuxtLink
+          to="https://github.com/miyashiiii/miyashiiii.github.io"
+          style="text-decoration: none; color: inherit"
+        >
+          <q-tab name="source">
+            <q-icon name="fa-brands fa-github" />
+            source
           </q-tab>
         </NuxtLink>
       </q-tabs>

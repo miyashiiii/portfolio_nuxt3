@@ -27,8 +27,6 @@
         </div>
       </div>
     </div>
-    <!-- copyright -->
-    <!-- <div class="row justify-center">&copy; 2024 miyashiiii</div> -->
   </div>
 </template>
 

@@ -32,6 +32,7 @@
               v-for="tag in post.tags"
               class="text-caption q-ml-none"
               :label="tag"
+              :ripple="false"
             />
           </q-card-section>
         </q-card>

@@ -12,21 +12,6 @@
             <q-img src="/logo.png" style="width: 128px" no-spinner />
           </NuxtLink>
         </q-toolbar-title>
-
-        <q-tabs
-          v-model="tab"
-          no-caps
-          indicator-color="black"
-          class="text-black text-bold"
-          style="font-size: 16px"
-        >
-          <NuxtLink to="/posts" style="text-decoration: none; color: inherit">
-            <q-tab name="posts"> POSTS </q-tab>
-          </NuxtLink>
-          <NuxtLink to="/works" style="text-decoration: none; color: inherit">
-            <q-tab name="works"> WORKS </q-tab>
-          </NuxtLink>
-        </q-tabs>
       </q-toolbar>
     </div>
 
