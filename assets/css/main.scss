@@ -2,11 +2,10 @@ body {
   scrollbar-gutter: stable;
   overflow-y: scroll;
 }
-h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1em;
+.footer-tab {
+  width: 80px;
 }
-.prof-text {
-  font-size: 1.2rem;
+
+.no-decoration {
+  text-decoration: none;
 }

@@ -1,30 +1,16 @@
 <template>
   <q-header class="text-black row justify-center bg-grey-3">
     <!-- PC向け -->
-    <div class="gt-sm">
-      <q-toolbar style="width: 900px" class="row justify-between">
-        <q-toolbar-title>
-          <NuxtLink
-            to="/"
-            style="text-decoration: none; color: inherit"
-            class="text-bold"
-          >
-            <q-img src="/logo.png" style="width: 128px" no-spinner />
-          </NuxtLink>
-        </q-toolbar-title>
-      </q-toolbar>
-    </div>
-
-    <!-- SP向け -->
-    <div class="lt-md q-my-xs">
-      <q-toolbar>
-        <q-toolbar-title class="text-black">
-          <NuxtLink to="/" style="text-decoration: none" class="text-bold">
-            <q-img src="/logo.png" style="width: 128px" no-spinner />
-          </NuxtLink>
-        </q-toolbar-title>
-      </q-toolbar>
-    </div>
+    <q-toolbar
+      :style="$q.screen.gt.sm ? 'width:900px' : ''"
+      :class="$q.screen.gt.sm ? '' : 'text-center'"
+    >
+      <q-toolbar-title>
+        <NuxtLink to="/" class="text-bold">
+          <q-img src="/logo.png" style="width: 128px" no-spinner />
+        </NuxtLink>
+      </q-toolbar-title>
+    </q-toolbar>
   </q-header>
 </template>
 

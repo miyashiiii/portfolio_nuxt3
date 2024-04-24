@@ -1,6 +1,6 @@
 <template>
   <div class="row justify-center">
-    <div style="max-width: 950px">
+    <div style="max-width: 940px">
       <div
         class="q-pt-lg row items-start q-gutter-lg"
         :class="$q.screen.lt.md ? 'justify-around' : 'justify-between'"
@@ -20,11 +20,7 @@
             />
           </a>
           <q-card-section>
-            <a
-              :href="post.url"
-              class="text-bold text-black"
-              style="text-decoration: none"
-            >
+            <a :href="post.url" class="text-bold text-black no-decoration">
               {{ post.title }}
             </a>
             <div class="q-mt-xs text-grey-8">{{ post.subtitle }}</div>

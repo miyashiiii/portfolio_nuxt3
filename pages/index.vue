@@ -7,10 +7,13 @@
           no-spinner
           style="height: 300px; width: 300px"
         />
-        <div class="justify-center q-gutter-sm">
-          <div class="prof-text text-weight-bold text-center">miyashiiii</div>
-          <div class="prof-text text-center">Software engineer</div>
-          <div class="prof-text text-center">Saitama, Japan</div>
+        <div
+          class="justify-center q-gutter-sm text-center"
+          style="font-size: 1.2rem"
+        >
+          <div class="text-weight-bold">miyashiiii</div>
+          <div>Software engineer</div>
+          <div>Saitama, Japan</div>
         </div>
       </div>
 

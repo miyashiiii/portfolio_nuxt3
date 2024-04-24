@@ -27,28 +27,20 @@
             />
             <q-img
               v-else
-              :src="getServiceFromUrl(post.url).icon"
+              :src="getServiceIconFromUrl(post.url)"
               style="height: 50px; width: 50px"
               no-spinner
             />
           </a>
           <q-card-section>
-            <a
-              :href="post.url"
-              class="text-bold text-black"
-              style="text-decoration: none"
-            >
+            <a :href="post.url" class="text-bold text-black no-decoration">
               {{ post.title }}
             </a>
             <div class="q-mt-xs text-grey-8">
               <span class="text-black">{{ post.date }}</span> -
-              {{ getServiceFromUrl(post.url).name }}
+              {{ getServiceNameFromUrl(post.url) }}
             </div>
-            <NuxtLink
-              :to="`/posts?tag=${tag}`"
-              style="text-decoration: none; color: inherit"
-              v-for="tag in post.tags"
-            >
+            <NuxtLink :to="`/posts?tag=${tag}`" v-for="tag in post.tags">
               <q-chip class="text-caption q-ml-none" :label="tag" />
             </NuxtLink>
           </q-card-section>
@@ -63,7 +55,7 @@
           class="q-gutter-x-md items-center bg-white"
           v-for="post in posts"
         >
-          <a :href="post.url" style="text-decoration: none">
+          <a :href="post.url">
             <div
               style="width: 120px; height: 80px"
               class="row justify-center items-center bg-grey-3"
@@ -84,7 +76,7 @@
             </div>
           </a>
           <div class="col">
-            <a :href="post.url" style="text-decoration: none">
+            <a :href="post.url" class="no-decoration">
               <div class="text-black text-bold">
                 {{ post.title }}
               </div>
@@ -93,11 +85,7 @@
                 {{ getServiceFromUrl(post.url).name }}
               </div>
             </a>
-            <NuxtLink
-              :to="`/posts?tag=${tag}`"
-              style="text-decoration: none; color: inherit"
-              v-for="tag in post.tags"
-            >
+            <NuxtLink :to="`/posts?tag=${tag}`" v-for="tag in post.tags">
               <q-chip class="text-caption q-ml-none" :label="tag" />
             </NuxtLink>
           </div>
@@ -172,5 +160,11 @@ const getServiceFromUrl = (url: string): Service => {
   } else {
     throw new Error("invalid url");
   }
+};
+const getServiceNameFromUrl = (url: string): string => {
+  return getServiceFromUrl(url).name;
+};
+const getServiceIconFromUrl = (url: string): string => {
+  return getServiceFromUrl(url).icon;
 };
 </script>
