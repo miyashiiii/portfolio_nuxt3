@@ -21,7 +21,7 @@
             <q-img
               no-spinner
               :src="link.icon"
-              style="height: 32px; width: 32px"
+              :width="link.small ? '28px' : '32px'"
             />
           </a>
         </div>
@@ -40,10 +40,11 @@ const links = [
   {
     url: "https://twitter.com/mysh_iiii",
     icon: "/sns/x.png",
+    small: true,
   },
   {
     url: "https://miyashiiii.hatenablog.jp/",
-    icon: "/sns/hatenablog.svg",
+    icon: "/sns/hatenablog.png",
   },
   {
     url: "https://qiita.com/miyashiiii",
