@@ -8,7 +8,18 @@ npm run dev
 
 ## 記事追加
 
-[assets/posts.json](assets/posts.json) を更新
+[assets/posts.json](assets/posts.json) を更新する。
+
+テンプレ:
+
+```json
+  {
+    "title": "",
+    "url": "",
+    "date": "2024/00/00",
+    "tags": []
+  },
+```
 
 ## 画面
 
