@@ -21,6 +21,12 @@ npm run dev
   },
 ```
 
+## JSON ファイル形式チェック
+
+```bash
+npm run test
+```
+
 ## 画面
 
 - トップページ
