@@ -1,37 +1,20 @@
 # miyashiiii.github.io
 
-## Setup
-
-Make sure to install the dependencies:
+## ローカルサーバー起動
 
 ```bash
-# npm
-npm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
 ```
 
-## Production
+## 記事追加
 
-Build the application for production:
+[assets/posts.json](assets/posts.json) を更新
 
-```bash
-# npm
-npm run build
-```
+## 画面
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- トップページ
+  - 各 SNS リンク
+- 記事一覧ページ
+  - 各ブログサイトへ投稿した記事の紹介
+- 成果物一覧ページ
+  - リリースしたアプリやサービスの紹介
