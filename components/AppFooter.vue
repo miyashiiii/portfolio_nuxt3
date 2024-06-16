@@ -26,9 +26,16 @@
             Works
           </q-tab>
         </NuxtLink>
+        <NuxtLink to="/tools" class="no-decoration text-white">
+          <q-tab name="tools" class="q-py-xs footer-tab">
+            <q-icon name="build" size="sm" />
+            Tools
+          </q-tab>
+        </NuxtLink>
         <NuxtLink
           to="https://github.com/miyashiiii/miyashiiii.github.io"
           class="no-decoration text-white"
+          target="_blank"
         >
           <div class="col q-py-xs footer-tab">
             <div class="row justify-center">
